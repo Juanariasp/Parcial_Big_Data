@@ -35,7 +35,14 @@ jobs:
           source env/bin/activate
           pip install -r requirements.txt
           pip list
-          # pytest
+          pytest
+      
+      - name: flake8
+        run: |
+          source env/bin/activate
+          flake8 leer_archivo.py
+          flake8 recibir_archivo.py
+          flake8 test_leer_archivo.py
           
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -44,3 +51,10 @@ jobs:
             aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
             aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
             aws-region: us-east-1
+
+      - name: Zappa
+        run: |
+          source env/bin/activate
+          pytest
+          zappa update dev
+          zappa update dev2
