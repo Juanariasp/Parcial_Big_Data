@@ -18,6 +18,8 @@ def f():
     data_titulo = html.find_all('div',class_='listing-card__title')
     data_precio = html.find_all('div',class_='price')
     
+    mock = str(data_titulo[0].text)
+    
     fecha_actual = datetime.today().strftime('%Y-%m-%d')
     
     linea_0 = "FechaDescarga, Info, Valor, NumHabitaciones, NumBanos, mts2\n"
@@ -28,7 +30,4 @@ def f():
             
     boto3.client('s3').put_object(Body=linea_0,Bucket='casas-fina-20020503',Key=str(nombre+".csv"))
     
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
-    }
+    return mock
