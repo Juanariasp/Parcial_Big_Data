@@ -5,7 +5,7 @@
 <br>
 <i><b>Docente:</b></i> Camilo Rodriguez
 <br>
-<i><b>Asignatura:</b></i> Aprendizaje de Maquina
+<i><b>Asignatura:</b></i> Big - Data 
 <br>
 <i><b>Tema:</b></i> Primer Parcial
 <br>
