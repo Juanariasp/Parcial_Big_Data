@@ -9,6 +9,8 @@
 <br>
 <i><b>Tema:</b></i> Primer Parcial
 <br>
-<i><b>Estudiante: </b> </i> Juan Esteban Arias
+<i><b>Estudiantes: </b> </i> 
+<li>Juan Camilo Hernandez</li>
+<li>Juan Esteban Arias </li>
 </FONT>
 </div>
